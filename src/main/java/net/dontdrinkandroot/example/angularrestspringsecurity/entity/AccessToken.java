@@ -6,9 +6,6 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import java.util.Date;
 
-/**
- * @author Philip Washington Sorst <philip@sorst.net>
- */
 @javax.persistence.Entity
 public class AccessToken implements Entity
 {

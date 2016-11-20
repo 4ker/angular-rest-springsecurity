@@ -18,7 +18,8 @@
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
-	
+
+
 	<!--
 		Map the REST Servlet to /rest/ 
 	 -->
@@ -39,7 +40,8 @@
 		<servlet-name>RestService</servlet-name>
 		<url-pattern>/rest/*</url-pattern>
 	</servlet-mapping>
-	
+
+
 	<!--
 		Apply Spring Security Filter to all Requests 
 	 -->
@@ -49,7 +51,10 @@
     </filter>
     <filter-mapping>
         <filter-name>springSecurityFilterChain</filter-name>
-        <url-pattern>/*</url-pattern>
+        <url-pattern>*</url-pattern>
+		<!--如果改成 “/js/*”，只能获得静态的 js 文件了，css 文件统统不管用
+            <url-pattern>*</url-pattern>
+		-->
     </filter-mapping>
     
 </web-app>

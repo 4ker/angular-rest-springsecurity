@@ -1,3 +1,49 @@
+<!DOCTYPE project [
+		<!ELEMENT project (modelVersion|groupId|artifactId|version|packaging|properties|developers|licenses|prerequisites|build|scm|dependencies)*>
+		<!ATTLIST project
+				xmlns CDATA #REQUIRED
+				xmlns:xsi CDATA #REQUIRED
+				xsi:schemaLocation CDATA #REQUIRED>
+		<!ELEMENT modelVersion (#PCDATA)>
+		<!ELEMENT groupId (#PCDATA)>
+		<!ELEMENT artifactId (#PCDATA)>
+		<!ELEMENT version (#PCDATA)>
+		<!ELEMENT packaging (#PCDATA)>
+		<!ELEMENT properties (version.org.springframework.security|version.org.springframework|version.com.sun.jersey.contribs|version.org.hibernate|org.slf4j.version|javax.servlet-api.version|maven-compiler-plugin.version|org.hsqldb.version|commons-dbcp.version|junit.version|org.eclipse.jetty.jetty-maven-plugin.version)*>
+		<!ELEMENT version.org.springframework.security (#PCDATA)>
+		<!ELEMENT version.org.springframework (#PCDATA)>
+		<!ELEMENT version.com.sun.jersey.contribs (#PCDATA)>
+		<!ELEMENT version.org.hibernate (#PCDATA)>
+		<!ELEMENT org.slf4j.version (#PCDATA)>
+		<!ELEMENT javax.servlet-api.version (#PCDATA)>
+		<!ELEMENT maven-compiler-plugin.version (#PCDATA)>
+		<!ELEMENT org.hsqldb.version (#PCDATA)>
+		<!ELEMENT commons-dbcp.version (#PCDATA)>
+		<!ELEMENT junit.version (#PCDATA)>
+		<!ELEMENT org.eclipse.jetty.jetty-maven-plugin.version (#PCDATA)>
+		<!ELEMENT developers (developer)*>
+		<!ELEMENT developer (name|url)*>
+		<!ELEMENT name (#PCDATA)>
+		<!ELEMENT url (#PCDATA)>
+		<!ELEMENT licenses (license)*>
+		<!ELEMENT license (name|url|distribution)*>
+		<!ELEMENT distribution (#PCDATA)>
+		<!ELEMENT prerequisites (maven)*>
+		<!ELEMENT maven (#PCDATA)>
+		<!ELEMENT build (plugins)*>
+		<!ELEMENT plugins (plugin)*>
+		<!ELEMENT plugin (groupId|artifactId|version|configuration)*>
+		<!ELEMENT configuration (source|target)*>
+		<!ELEMENT source (#PCDATA)>
+		<!ELEMENT target (#PCDATA)>
+		<!ELEMENT scm (developerConnection)*>
+		<!ELEMENT developerConnection (#PCDATA)>
+		<!ELEMENT dependencies (dependency)*>
+		<!ELEMENT dependency (groupId|artifactId|version|exclusions|scope)*>
+		<!ELEMENT exclusions (exclusion)*>
+		<!ELEMENT exclusion (groupId|artifactId)*>
+		<!ELEMENT scope (#PCDATA)>
+		]>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>net.dontdrinkandroot.example</groupId>
